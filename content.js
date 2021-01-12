@@ -3,6 +3,7 @@ filtered=Array.from(document.querySelectorAll("a.story-package-module__story__he
 let newHeadlines=[];
 let newText="";
 //console.log("Local Storage",localStorage["headlines"])
+const timer=localStorage["timer"]||60
 if(filtered.length){
 	storage=JSON.parse(localStorage["headlines"]||"[]")
 	
@@ -28,13 +29,13 @@ if(filtered.length){
 		
 function postDiscordMessage(message){
 	result=null;
-	fetch("https://discordapp.com/api/channels/792312646196002828/messages",{
+	fetch("https://discordapp.com/api/channels/798509563468185600/messages",{
 	method:"POST",
 	body:JSON.stringify({content:message}),
 	headers:{
 	"content-type":"application/json",
 	"Authorization": "Bot Nzg3OTgzOTkzNDgzMDM0NzA1.X9c5SA.JJSDgDImyOQldqGJiLnIfaJOW_w",
-	"User-Agent": "Potato User Agent"
+	"User-Agent": "azndy User Agent"
 	}}).then(res=>{
 	result=res;console.log("Posted to Discord and Reloaded");
 	window.location.reload()
