@@ -1,0 +1,12 @@
+{
+"manifest_version":2,
+"name":"Bloomberg Watcher",
+"version":"1.0",
+"icons":{
+"48":"icons/48.png"
+},
+"content_scripts":[{
+"js":["content.js"],
+"matches":["*://*.bloomberg.com/markets"]
+}]
+}
