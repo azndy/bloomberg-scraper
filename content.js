@@ -1,4 +1,4 @@
-const token=""
+const token="vVtoY8aZxFzzMUaTwMJBEUIZXwhG5eJG"
 console.log("This is Bloomberg Market")
 filtered=Array.from(document.querySelectorAll("a.story-package-module__story__headline-link")).filter(item=>/spacs?/i.test(item.innerText))
 let newHeadlines=[];
