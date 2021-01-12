@@ -1,3 +1,4 @@
+const token=""
 console.log("This is Bloomberg Market")
 filtered=Array.from(document.querySelectorAll("a.story-package-module__story__headline-link")).filter(item=>/spacs?/i.test(item.innerText))
 let newHeadlines=[];
@@ -34,7 +35,7 @@ function postDiscordMessage(message){
 	body:JSON.stringify({content:message}),
 	headers:{
 	"content-type":"application/json",
-	"Authorization": "Bot Nzg3OTgzOTkzNDgzMDM0NzA1.X9c5SA.JJSDgDImyOQldqGJiLnIfaJOW_w",
+	"Authorization": "Bot "+token,
 	"User-Agent": "azndy User Agent"
 	}}).then(res=>{
 	result=res;console.log("Posted to Discord and Reloaded");
